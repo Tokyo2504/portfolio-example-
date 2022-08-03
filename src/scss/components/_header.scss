@@ -1,0 +1,21 @@
+.header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 5;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  width: 100%;
+  color: #fff;
+  background-color: #00ccd3;
+
+  &__container {
+    @include flex-all-sb;
+  }
+
+  &__btn {
+    @include tablet {
+      display: none;
+    }
+  }
+}

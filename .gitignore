@@ -1,0 +1,13 @@
+/node_modules
+/.vscode
+.stylelintrc.json
+package-lock.json
+package.json
+.editorconfig
+.htmlhintrc
+gulpfile.js
+.ecrc
+src/js/_vars.js
+src/js/_functions.js
+src/js/_components.js
+src/js/functions

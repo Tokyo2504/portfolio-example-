@@ -1,0 +1,17 @@
+// @include font-face("Muller", "../fonts/MullerRegular", 400, normal);
+
+// Подключение шрифтов всех расширений
+//@mixin font-face($font-family, $file-path, $weight: normal, $style: normal) {
+//  @font-face {
+//    font-family: $font-famaly;
+//    font-weight: $weight;
+//    font-size: $style;
+
+//    src: url('#{$file-path}.eot');
+//    src: local('#{$font-famaly}'),
+//         url('#{$file-path}.eot?#iefix') format('embedded-opentype')
+//         url('#{$file-path}.woff2') format('woff2')
+//         url('#{$file-path}.woff') format('woff')
+//         url('#{$file-path}.ttf') format('truetype')
+//  }
+//}
