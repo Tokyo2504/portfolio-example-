@@ -12,7 +12,7 @@ html {
 
 .page {
   height: 100%;
-  font-family: $font-family, sans-serif;
+  font-family: $font-family;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -24,8 +24,8 @@ html {
   font-style: $font-style;
   font-size: $font-size;
   line-height: $line-height;
-  color: $text;
-  background-color: $bg;
+  color: $text-color;
+  background-color: $bg-color;
 }
 
 img {

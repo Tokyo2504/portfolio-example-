@@ -1,9 +1,5 @@
 .burger {
   @include burger;
 
-  display: none;
-
-  @include tablet {
-    display: block;
-  }
+  margin: 30px;
 }

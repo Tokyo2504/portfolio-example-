@@ -6,8 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#111111">
-  <title>New Site</title>
-  <link rel="preload" href="fonts/MullerRegular.woff2" as="font" type="font/woff2" crossorigin>
+  <title>Portfolio</title>
+  <link rel="preload" href="fonts/PoppinsMedium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/PoppinsBold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/vendor.css">
   <link rel="stylesheet" href="css/main.css">
   <script defer src="js/main.js"></script>
@@ -16,31 +17,61 @@
 <body class="page__body">
   <div class="site-container">
     <header class="header">
-  <div class="container header__container">
-    <div class="logo">logo</div>
+  <div class="header__overlay" data-menu-overlay></div>
     <nav class="nav" title="Главное меню" data-menu>
+      <button class="btn-reset nav__close" data-close-menu>
+        <svg>
+          <use xlink:href="img/sprite.svg#close"></use>
+        </svg>
+      </button>
       <ul class="nav__list list-reset">
         <li class="nav__item">
-          <a href="#" class="nav__link" data-menu-item data-scroll>Обзор</a>
+          <a href="#" class="nav__link" data-menu-item data-scroll>Про меня</a>
         </li>
         <li class="nav__item">
-          <a href="#" class="nav__link" data-menu-item data-scroll>Особенности</a>
+          <a href="#" class="nav__link" data-menu-item data-scroll>Мой опыт</a>
         </li>
         <li class="nav__item">
-          <a href="#" class="nav__link" data-menu-item data-scroll>Технология</a>
+          <a href="#" class="nav__link" data-menu-item data-scroll>Мои навыки</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link" data-menu-item data-scroll>Мои работы</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link" data-menu-item data-scroll>Прайс-лист</a>
         </li>
         <li class="nav__item">
           <a href="#" class="nav__link" data-menu-item data-scroll>Контакты</a>
         </li>
       </ul>
+
+      <ul class="social list-reset nav__social" title="Мои соцсети">
+        <li class="social__item">
+          <a href="#" target="_blank" class="social__link social__link--fb" aria-label="Моя страничка на Github">
+            <svg class="">
+              <use xlink:href="img/sprite.svg#github"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#" target="_blank" class="social__link social__link--vk" aria-label="Моя страничка в Instagram">
+            <svg class="">
+              <use xlink:href="img/sprite.svg#instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#" target="_blank" class="social__link social__link--tw" aria-label="Моя страничка на Facebook">
+            <svg class="">
+              <use xlink:href="img/sprite.svg#facebook"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
     </nav>
-    <button class="btn-reset btn header__btn" data-graph-path="">Войти</button>
     <button class="burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
       <span class="burger__line"></span>
-      <span class="burger__line"></span>
-      <span class="burger__line"></span>
     </button>
-  </div>
 </header>
 
     <main class="main">

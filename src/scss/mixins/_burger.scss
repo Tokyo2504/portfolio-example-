@@ -1,16 +1,16 @@
 /* stylelint-disable */
 
 @mixin burger {
-  $burger-width: 30px;
-  $burger-height: 20px;
-  $burger-line-height: 2px;
+  $burger-width: 36px;
+  $burger-height: 21px;
+  $burger-line-height: 3px;
 
   position: relative;
   border: none;
   padding: 0;
   width: $burger-width;
   height: $burger-height;
-  color: #fff;
+  color: #151812;
   background-color: transparent;
   cursor: pointer;
 
@@ -18,8 +18,8 @@
   &::after {
     content: "";
     position: absolute;
-    left: 0;
-    width: 100%;
+    right: 0;
+    width: 30px;
     height: $burger-line-height;
     background-color: currentColor;
     transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
@@ -42,26 +42,5 @@
     background-color: currentColor;
     transform: translateY(-50%);
     transition: transform 0.3s ease-in-out;
-  }
-
-  &--active {
-    &::before {
-      top: 50%;
-      z-index: 20;
-      transform: rotate(45deg);
-      transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
-    }
-
-    &::after {
-      top: 50%;
-      z-index: 20;
-      transform: rotate(-45deg);
-      transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
-    }
-
-    .burger__line {
-      transform: scale(0);
-      transition: transform 0.3s ease-in-out;
-    }
   }
 }

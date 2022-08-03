@@ -1,0 +1,20 @@
+.social {
+  @include flex-v-center;
+
+  &__item {
+    @include mr(15px);
+
+    svg {
+      width: 20px;
+      height: 20px;
+      color: inherit;
+      fill: currentcolor;
+      transition: fill 0.3s ease-in-out;
+
+      &:hover {
+        fill: #212121;
+        transition: fill 0.3s ease-in-out;
+      }
+    }
+  }
+}

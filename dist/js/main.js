@@ -5,9 +5,12 @@
 /*!*******************************!*\
   !*** ./src/js/_components.js ***!
   \*******************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-console.log('components');
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _components_burger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/burger */ "./src/js/components/burger.js");
+
 
 /***/ }),
 
@@ -20,7 +23,6 @@ console.log('components');
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _functions_mobile_check__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./functions/mobile-check */ "./src/js/functions/mobile-check.js");
-/* harmony import */ var _functions_burger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./functions/burger */ "./src/js/functions/burger.js");
 // Данный файл - лишь собрание подключений готовых компонентов.
 // Рекомендуется создавать отдельный файл в папке components и подключать все там
 // Определение операционной системы на мобильных
@@ -38,8 +40,8 @@ console.log((0,_functions_mobile_check__WEBPACK_IMPORTED_MODULE_0__.mobileCheck)
 // Фикс фулскрин-блоков
 // import './functions/fix-fullheight';
 // Реализация бургер-меню
-
- // Реализация остановки скролла (не забудьте вызвать функцию)
+//import { burger } from './functions/burger';
+// Реализация остановки скролла (не забудьте вызвать функцию)
 // import { disableScroll } from './functions/disable-scroll';
 // Реализация включения скролла (не забудьте вызвать функцию)
 // import { enableScroll } from './functions/enable-scroll';
@@ -123,10 +125,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/js/functions/burger.js":
-/*!************************************!*\
-  !*** ./src/js/functions/burger.js ***!
-  \************************************/
+/***/ "./src/js/components/burger.js":
+/*!*************************************!*\
+  !*** ./src/js/components/burger.js ***!
+  \*************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -137,39 +139,36 @@ __webpack_require__.r(__webpack_exports__);
 
 
 (function () {
-  var _document, _document2, _document3, _document4;
+  var _document, _document2, _document3, _document4, _document5;
 
   const burger = (_document = document) === null || _document === void 0 ? void 0 : _document.querySelector('[data-burger]');
   const menu = (_document2 = document) === null || _document2 === void 0 ? void 0 : _document2.querySelector('[data-menu]');
   const menuItems = (_document3 = document) === null || _document3 === void 0 ? void 0 : _document3.querySelectorAll('[data-menu-item]');
   const overlay = (_document4 = document) === null || _document4 === void 0 ? void 0 : _document4.querySelector('[data-menu-overlay]');
+  const closeMenu = (_document5 = document) === null || _document5 === void 0 ? void 0 : _document5.querySelector('[data-close-menu]');
   burger === null || burger === void 0 ? void 0 : burger.addEventListener('click', e => {
-    burger === null || burger === void 0 ? void 0 : burger.classList.toggle('burger--active');
-    menu === null || menu === void 0 ? void 0 : menu.classList.toggle('menu--active');
-
-    if (menu !== null && menu !== void 0 && menu.classList.contains('menu--active')) {
-      burger === null || burger === void 0 ? void 0 : burger.setAttribute('aria-expanded', 'true');
-      burger === null || burger === void 0 ? void 0 : burger.setAttribute('aria-label', 'Закрыть меню');
-      (0,_functions_disable_scroll__WEBPACK_IMPORTED_MODULE_0__.disableScroll)();
-    } else {
-      burger === null || burger === void 0 ? void 0 : burger.setAttribute('aria-expanded', 'false');
-      burger === null || burger === void 0 ? void 0 : burger.setAttribute('aria-label', 'Открыть меню');
-      (0,_functions_enable_scroll__WEBPACK_IMPORTED_MODULE_1__.enableScroll)();
-    }
+    menu === null || menu === void 0 ? void 0 : menu.classList.add('menu--active');
+    overlay === null || overlay === void 0 ? void 0 : overlay.classList.add('overlay--active');
+    (0,_functions_enable_scroll__WEBPACK_IMPORTED_MODULE_1__.enableScroll)();
+  });
+  closeMenu === null || closeMenu === void 0 ? void 0 : closeMenu.addEventListener('click', () => {
+    menu.classList.remove('menu--active');
+    overlay === null || overlay === void 0 ? void 0 : overlay.classList.remove('overlay--active');
+    (0,_functions_enable_scroll__WEBPACK_IMPORTED_MODULE_1__.enableScroll)();
   });
   overlay === null || overlay === void 0 ? void 0 : overlay.addEventListener('click', () => {
     burger === null || burger === void 0 ? void 0 : burger.setAttribute('aria-expanded', 'false');
     burger === null || burger === void 0 ? void 0 : burger.setAttribute('aria-label', 'Открыть меню');
-    burger.classList.remove('burger--active');
     menu.classList.remove('menu--active');
+    overlay === null || overlay === void 0 ? void 0 : overlay.classList.remove('overlay--active');
     (0,_functions_enable_scroll__WEBPACK_IMPORTED_MODULE_1__.enableScroll)();
   });
   menuItems === null || menuItems === void 0 ? void 0 : menuItems.forEach(el => {
     el.addEventListener('click', () => {
       burger === null || burger === void 0 ? void 0 : burger.setAttribute('aria-expanded', 'false');
       burger === null || burger === void 0 ? void 0 : burger.setAttribute('aria-label', 'Открыть меню');
-      burger.classList.remove('burger--active');
       menu.classList.remove('menu--active');
+      overlay === null || overlay === void 0 ? void 0 : overlay.classList.remove('overlay--active');
       (0,_functions_enable_scroll__WEBPACK_IMPORTED_MODULE_1__.enableScroll)();
     });
   });
@@ -666,7 +665,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _vars__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_vars */ "./src/js/_vars.js");
 /* harmony import */ var _functions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./_functions */ "./src/js/_functions.js");
 /* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./_components */ "./src/js/_components.js");
-/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components__WEBPACK_IMPORTED_MODULE_3__);
 
 
 
