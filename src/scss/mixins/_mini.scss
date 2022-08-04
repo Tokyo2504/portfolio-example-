@@ -1,5 +1,22 @@
 /* stylelint-disable */
 
+@mixin circle {
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    z-index: -1;
+    display: block;
+    border-radius: 100%;
+    width: 36px;
+    height: 36px;
+    background-color: $primary-color;
+    transform: translateY(-50%);
+  }
+}
+
+
 @mixin bg-cover {
   background-position: center;
   background-size: cover;

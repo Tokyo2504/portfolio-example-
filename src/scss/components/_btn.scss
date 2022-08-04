@@ -1,0 +1,15 @@
+.btn {
+  padding: 12px 26px;
+  box-shadow: 0 4px 4px rgba(#000, 0.15);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  background-color: $primary-color;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: none;
+    background-color: transparent;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+}

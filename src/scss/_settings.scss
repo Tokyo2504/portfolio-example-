@@ -98,6 +98,10 @@ a {
   margin: 0 auto;
   padding: 0 $containerPadding;
   max-width: $containerWidth;
+
+  @include mobile {
+    padding: 0 10px;
+  }
 }
 
 .js-focus-visible :focus:not(.focus-visible) {

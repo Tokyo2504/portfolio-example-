@@ -1,7 +1,7 @@
 <header class="header">
-  <div class="header__overlay" data-menu-overlay></div>
+  <div class="header__overlay" data-menu-overlay>
     <nav class="nav" title="Главное меню" data-menu>
-      <button class="btn-reset nav__close" data-close-menu>
+      <button class="btn-reset nav__close" title="Закрыть меню" aria-label="Закрыть меню" data-close-menu>
         <svg>
           <use xlink:href="img/sprite.svg#close"></use>
         </svg>
@@ -51,7 +51,8 @@
         </li>
       </ul>
     </nav>
-    <button class="burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
-      <span class="burger__line"></span>
-    </button>
+  </div>
+  <button class="burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
+    <span class="burger__line"></span>
+  </button>
 </header>
