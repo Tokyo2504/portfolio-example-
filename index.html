@@ -17,9 +17,9 @@
 <body class="page__body">
   <div class="site-container">
     <header class="header">
-  <div class="header__overlay" data-menu-overlay></div>
+  <div class="header__overlay" data-menu-overlay>
     <nav class="nav" title="Главное меню" data-menu>
-      <button class="btn-reset nav__close" data-close-menu>
+      <button class="btn-reset nav__close" title="Закрыть меню" aria-label="Закрыть меню" data-close-menu>
         <svg>
           <use xlink:href="img/sprite.svg#close"></use>
         </svg>
@@ -69,12 +69,50 @@
         </li>
       </ul>
     </nav>
-    <button class="burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
-      <span class="burger__line"></span>
-    </button>
+  </div>
+  <button class="burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
+    <span class="burger__line"></span>
+  </button>
 </header>
 
     <main class="main">
+      <div class="hero">
+  <div class="container hero__container">
+    <div class="hero__suptitle suptitle">Меня зовут Александра Смит</div>
+    <h1 class="title hero__title">Я web-разработчик из города Москва</h1>
+    <div class="hero__links">
+      <a href="#" class="hero__link btn">Портфолио</a>
+      <a href="#" class="hero__link hero__link--bg">Про меня</a>
+    </div>
+    <div class="hero__social">
+      <span class="hero__social-text">Социальные сети</span>
+      <ul class="social list-reset hero__list" title="Мои соцсети">
+        <li class="social__item">
+          <a href="#" target="_blank" class="social__link social__link--fb" aria-label="Моя страничка на Github">
+            <svg class="">
+              <use xlink:href="img/sprite.svg#github"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#" target="_blank" class="social__link social__link--vk" aria-label="Моя страничка в Instagram">
+            <svg class="">
+              <use xlink:href="img/sprite.svg#instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#" target="_blank" class="social__link social__link--tw" aria-label="Моя страничка на Facebook">
+            <svg class="">
+              <use xlink:href="img/sprite.svg#facebook"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
     </main>
 
     <footer class="footer">
