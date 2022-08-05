@@ -29,7 +29,7 @@ html {
 }
 
 img {
-  height: auto;
+  height: 100%;
   max-width: 100%;
   object-fit: cover;
 }
@@ -124,4 +124,12 @@ a {
 
 .page--ios .dis-scroll {
   position: relative;
+}
+
+.section {
+  padding-top: 120px;
+
+  @include tablet {
+    padding-top: 40px;
+  }
 }

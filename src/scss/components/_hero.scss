@@ -6,17 +6,37 @@
   padding-top: 205px;
   padding-bottom: 30px;
   height: 100vh;
+  background-color: #74d1d4;
 
   &__suptitle {
-    margin-bottom: 9px;
+    @include before-circle;
+
+    position: relative;
+    z-index: 2;
+    margin-bottom: 6px;
+    padding-left: 12px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+
+    &::before {
+      left: 0;
+      transform: translateY(-50%);
+    }
   }
 
   &__title {
+    margin: 0;
     margin-bottom: 25px;
     max-width: 532px;
     font-weight: 700;
     font-size: 48px;
     line-height: 60px;
+
+    @include small-tablet {
+      font-size: 40px;
+      line-height: 50px;
+    }
 
     @include mobile {
       max-width: 300px;
@@ -31,6 +51,10 @@
     position: absolute;
     bottom: 30px;
     width: 338px;
+
+    @include small-tablet {
+      display: none;
+    }
   }
 
   &__social-text {

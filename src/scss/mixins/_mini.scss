@@ -1,10 +1,10 @@
 /* stylelint-disable */
 
-@mixin circle {
+@mixin before-circle {
   &::before {
     content: "";
     position: absolute;
-    left: 0;
+    left: 50%;
     top: 50%;
     z-index: -1;
     display: block;
@@ -12,10 +12,24 @@
     width: 36px;
     height: 36px;
     background-color: $primary-color;
-    transform: translateY(-50%);
+    transform: translate(-50%, -50%);
   }
 }
 
+@mixin divider {
+  &::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 0 auto;
+    background-color: $primary-color;
+
+    @include mobile {
+      margin-top: 15px;
+    }
+  }
+}
 
 @mixin bg-cover {
   background-position: center;
