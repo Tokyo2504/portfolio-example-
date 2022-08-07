@@ -170,7 +170,7 @@ a {
 }
 @media (max-width: 1024px) {
   .section {
-    padding-top: 40px;
+    padding-top: 60px;
   }
 }
 
@@ -451,13 +451,21 @@ a {
   font-weight: 700;
   font-size: 36px;
   line-height: 60px;
+  text-align: center;
   color: #000;
+}
+.title--fsz14 {
+  font-size: 14px;
+  line-height: 21px;
+}
+.title--fsz16 {
+  font-size: 16px;
+  line-height: 24px;
 }
 .title--before-circle {
   position: relative;
   z-index: 2;
   margin-bottom: 6px;
-  padding-left: 12px;
   font-weight: 700;
   font-size: 16px;
   line-height: 24px;
@@ -478,17 +486,12 @@ a {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-@media (max-width: 576px) {
-  .title {
-    font-size: 24px;
-    line-height: 36px;
-  }
-}
 
 .subtitle {
   font-weight: 700;
   font-size: 36px;
   line-height: 60px;
+  text-align: center;
 }
 .subtitle::after {
   content: "";
@@ -496,12 +499,8 @@ a {
   width: 60px;
   height: 3px;
   margin: 0 auto;
+  margin-top: 15px;
   background-color: #ffa501;
-}
-@media (max-width: 576px) {
-  .subtitle::after {
-    margin-top: 15px;
-  }
 }
 @media (max-width: 576px) {
   .subtitle {
@@ -654,7 +653,7 @@ a {
   -webkit-column-gap: 70px;
   -moz-column-gap: 70px;
   column-gap: 70px;
-  grid-auto-rows: minmax(245px, auto);
+  grid-auto-rows: minmax(116px, auto);
   -ms-grid-columns: 400px minmax(auto, 570px);
   grid-template-columns: 400px minmax(auto, 570px);
   -ms-grid-rows: minmax(245px, auto) minmax(255px, auto);
@@ -675,6 +674,7 @@ a {
 }
 .about__subtitle {
   margin-bottom: 24px;
+  text-align: left;
 }
 .about__subtitle::after {
   margin: 0;
@@ -691,6 +691,7 @@ a {
 }
 .about__title {
   margin-bottom: 6px;
+  padding-left: 12px;
   font-size: 16px;
   text-align: left;
 }
@@ -735,6 +736,8 @@ a {
   display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, auto));
+  -ms-grid-rows: 116px;
+  grid-template-rows: 116px;
   gap: 20px 50px;
 }
 @media (max-width: 1024px) {
@@ -789,6 +792,125 @@ a {
   line-height: 21px;
 }
 .about__text {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.resume__content {
+  display: -ms-grid;
+  display: grid;
+  -webkit-column-gap: 135px;
+  -moz-column-gap: 135px;
+  column-gap: 135px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(auto, 425px));
+  row-gap: 40px;
+}
+.resume__title {
+  position: relative;
+  margin-bottom: 35px;
+  padding-left: 43px;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: left;
+}
+.resume__title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  border-radius: 100%;
+  width: 15px;
+  height: 15px;
+  background-color: #ffa501;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.resume__subtitle {
+  margin-bottom: 60px;
+}
+.resume__list {
+  position: relative;
+  padding-left: 45px;
+}
+.resume__list::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: -43px;
+  width: 1px;
+  height: calc(100% + 43px);
+  background-color: #000;
+}
+.resume__item:not(:last-child) {
+  margin-bottom: 45px;
+}
+.resume__head {
+  position: relative;
+  margin-bottom: 12px;
+  padding-left: 56px;
+  background-position: top 14px left 15px;
+  background-repeat: no-repeat;
+}
+.resume__head::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: -1;
+  display: block;
+  border-radius: 100%;
+  width: 36px;
+  height: 36px;
+  background-color: #ffa501;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.resume__head::before {
+  left: 0;
+  top: 0;
+  -webkit-transform: translate(0);
+  -ms-transform: translate(0);
+  transform: translate(0);
+}
+.resume__head::after {
+  content: "";
+  position: absolute;
+  left: -37px;
+  top: 50%;
+  width: 37px;
+  height: 1px;
+  background-color: #000;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.resume__head--university {
+  background-image: url("../img/resume/university.svg");
+}
+.resume__head--courses {
+  background-image: url("../img/resume/courses.svg");
+}
+.resume__head--developer {
+  background-image: url("../img/resume/developer.svg");
+}
+.resume__head--designer {
+  background-image: url("../img/resume/designer.svg");
+}
+.resume__caption {
+  text-align: left;
+}
+.resume__info {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+}
+.resume__descr {
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;

@@ -1,0 +1,112 @@
+.resume {
+  &__content {
+    display: grid;
+    column-gap: 135px;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(auto, 425px));
+    row-gap: 40px;
+  }
+
+  &__title {
+    position: relative;
+    margin-bottom: 35px;
+    padding-left: 43px;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: left;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      border-radius: 100%;
+      width: 15px;
+      height: 15px;
+      background-color: $primary-color;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 60px;
+  }
+
+  &__list {
+    position: relative;
+    padding-left: 45px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 8px;
+      top: -43px;
+      width: 1px;
+      height: calc(100% + 43px);
+      background-color: #000;
+    }
+  }
+
+  &__item {
+    @include mb(45px);
+  }
+
+  &__head {
+    @include before-circle;
+
+    position: relative;
+    margin-bottom: 12px;
+    padding-left: 56px;
+    background-position: top 14px left 15px;
+    background-repeat: no-repeat;
+
+    &::before {
+      left: 0;
+      top: 0;
+      transform: translate(0);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: -37px;
+      top: 50%;
+      width: 37px;
+      height: 1px;
+      background-color: #000;
+      transform: translateY(-50%);
+    }
+
+    &--university {
+      background-image: url("../img/resume/university.svg");
+    }
+
+    &--courses {
+      background-image: url("../img/resume/courses.svg");
+    }
+
+    &--developer {
+      background-image: url("../img/resume/developer.svg");
+    }
+
+    &--designer {
+      background-image: url("../img/resume/designer.svg");
+    }
+  }
+
+  &__caption {
+    text-align: left;
+  }
+
+  &__info {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &__descr {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
