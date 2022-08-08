@@ -5,11 +5,10 @@
   font-size: 14px;
   line-height: 21px;
   background-color: $primary-color;
-  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 
   &:hover {
-    box-shadow: none;
-    background-color: transparent;
-    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    color: #000;
+    transition: color 0.3s ease-in-out;
   }
 }

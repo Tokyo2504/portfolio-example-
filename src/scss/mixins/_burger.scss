@@ -10,9 +10,10 @@
   padding: 0;
   width: $burger-width;
   height: $burger-height;
-  color: #151812;
+  color: #fff;
   background-color: transparent;
   cursor: pointer;
+  transition: color 0.3s ease-in-out;
 
   &::before,
   &::after {
@@ -31,6 +32,11 @@
 
   &::after {
     top: calc(100% - $burger-line-height);
+  }
+
+  &:hover {
+    color: #dadada;
+    transition: color 0.3s ease-in-out;
   }
 
   &__line {
