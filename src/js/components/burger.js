@@ -11,7 +11,7 @@ import { enableScroll } from '../functions/enable-scroll';
   burger?.addEventListener('click', (e) => {
     menu?.classList.add('menu--active');
     overlay?.classList.add('overlay--active');
-    enableScroll();
+    disableScroll();
   });
 
   closeMenu?.addEventListener('click', () => {

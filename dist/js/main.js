@@ -151,7 +151,7 @@ __webpack_require__.r(__webpack_exports__);
   burger === null || burger === void 0 ? void 0 : burger.addEventListener('click', e => {
     menu === null || menu === void 0 ? void 0 : menu.classList.add('menu--active');
     overlay === null || overlay === void 0 ? void 0 : overlay.classList.add('overlay--active');
-    (0,_functions_enable_scroll__WEBPACK_IMPORTED_MODULE_1__.enableScroll)();
+    (0,_functions_disable_scroll__WEBPACK_IMPORTED_MODULE_0__.disableScroll)();
   });
   closeMenu === null || closeMenu === void 0 ? void 0 : closeMenu.addEventListener('click', () => {
     menu.classList.remove('menu--active');

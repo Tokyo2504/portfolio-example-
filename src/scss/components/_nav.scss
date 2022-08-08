@@ -70,10 +70,6 @@
 
   &__social {
     margin: auto auto 50px;
-
-    @include mobile {
-      margin-bottom: 20px;
-    }
   }
 
   &__close {
