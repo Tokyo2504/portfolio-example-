@@ -299,11 +299,6 @@ a {
 .nav__social {
   margin: auto auto 50px;
 }
-@media (max-width: 576px) {
-  .nav__social {
-    margin-bottom: 20px;
-  }
-}
 .nav__close {
   position: absolute;
   right: 25px;
