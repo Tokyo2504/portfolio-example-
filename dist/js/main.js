@@ -11,6 +11,9 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_burger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/burger */ "./src/js/components/burger.js");
 /* harmony import */ var _components_smooth_scroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/smooth-scroll */ "./src/js/components/smooth-scroll.js");
+/* harmony import */ var _components_skills_rating__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/skills-rating */ "./src/js/components/skills-rating.js");
+/* harmony import */ var _components_skills_rating__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_skills_rating__WEBPACK_IMPORTED_MODULE_2__);
+
 
 
 
@@ -175,6 +178,20 @@ __webpack_require__.r(__webpack_exports__);
     });
   });
 })();
+
+/***/ }),
+
+/***/ "./src/js/components/skills-rating.js":
+/*!********************************************!*\
+  !*** ./src/js/components/skills-rating.js ***!
+  \********************************************/
+/***/ (() => {
+
+const value = document.querySelectorAll('.rating__value');
+const line = document.querySelectorAll('.rating__line');
+value.forEach((item, i) => {
+  line[i].style.width = item.innerHTML;
+});
 
 /***/ }),
 

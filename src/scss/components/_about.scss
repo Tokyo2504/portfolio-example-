@@ -82,12 +82,10 @@
   &__list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, auto));
-    grid-template-rows: minmax(116px, auto);
     gap: 20px 50px;
 
     @include tablet {
       column-gap: 15px;
-      grid-template-rows: auto;
     }
   }
 
